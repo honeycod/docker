@@ -1560,3 +1560,89 @@ logger=plugins.update.checker t=2025-10-17T14:01:42.779848979Z level=info msg="U
 logger=cleanup t=2025-10-17T14:11:42.240710005Z level=info msg="Completed cleanup jobs" duration=32.170737ms
 logger=plugins.update.checker t=2025-10-17T14:11:43.102228315Z level=info msg="Update check succeeded" duration=588.514405ms
 logger=infra.usagestats t=2025-10-17T14:12:29.222383183Z level=info msg="Usage stats are ready to report"
+logger=cleanup t=2025-10-17T14:21:42.246969585Z level=info msg="Completed cleanup jobs" duration=41.187674ms
+logger=cleanup t=2025-10-17T14:31:42.25319696Z level=info msg="Completed cleanup jobs" duration=47.557544ms
+logger=server t=2025-10-17T14:38:05.717362895Z level=info msg="Shutdown started" reason="System signal: terminated"
+logger=tracing t=2025-10-17T14:38:05.718205311Z level=info msg="Closing tracing"
+logger=grafana-apiserver t=2025-10-17T14:38:05.718164186Z level=info msg="StorageObjectCountTracker pruner is exiting"
+logger=ngalert.scheduler t=2025-10-17T14:38:05.718293894Z level=info msg=stopped component=ticker last_tick=2025-10-17T14:38:00Z
+logger=settings t=2025-10-17T14:38:32.15052237Z level=info msg="Starting Grafana" version=12.2.0 commit=92f1fba9b4b6700328e99e97328d6639df8ddc3d branch=release-12.2.0 compiled=2025-10-17T14:38:32Z
+logger=settings t=2025-10-17T14:38:32.150763078Z level=info msg="Config loaded from" file=/usr/share/grafana/conf/defaults.ini
+logger=settings t=2025-10-17T14:38:32.150772662Z level=info msg="Config loaded from" file=/etc/grafana/grafana.ini
+logger=settings t=2025-10-17T14:38:32.150774787Z level=info msg="Config overridden from command line" arg="default.paths.data=/var/lib/grafana"
+logger=settings t=2025-10-17T14:38:32.150776328Z level=info msg="Config overridden from command line" arg="default.paths.logs=/var/log/grafana"
+logger=settings t=2025-10-17T14:38:32.150777912Z level=info msg="Config overridden from command line" arg="default.paths.plugins=/var/lib/grafana/plugins"
+logger=settings t=2025-10-17T14:38:32.150779412Z level=info msg="Config overridden from command line" arg="default.paths.provisioning=/etc/grafana/provisioning"
+logger=settings t=2025-10-17T14:38:32.150780828Z level=info msg="Config overridden from command line" arg="default.log.mode=console"
+logger=settings t=2025-10-17T14:38:32.150782453Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_DATA=/var/lib/grafana"
+logger=settings t=2025-10-17T14:38:32.150783995Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_LOGS=/var/log/grafana"
+logger=settings t=2025-10-17T14:38:32.150785537Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_PLUGINS=/var/lib/grafana/plugins"
+logger=settings t=2025-10-17T14:38:32.150786995Z level=info msg="Config overridden from Environment variable" var="GF_PATHS_PROVISIONING=/etc/grafana/provisioning"
+logger=settings t=2025-10-17T14:38:32.150788953Z level=info msg=Target target=[all]
+logger=settings t=2025-10-17T14:38:32.150792703Z level=info msg="Path Home" path=/usr/share/grafana
+logger=settings t=2025-10-17T14:38:32.150794037Z level=info msg="Path Data" path=/var/lib/grafana
+logger=settings t=2025-10-17T14:38:32.150795328Z level=info msg="Path Logs" path=/var/log/grafana
+logger=settings t=2025-10-17T14:38:32.150796703Z level=info msg="Path Plugins" path=/var/lib/grafana/plugins
+logger=settings t=2025-10-17T14:38:32.15079812Z level=info msg="Path Provisioning" path=/etc/grafana/provisioning
+logger=settings t=2025-10-17T14:38:32.15079962Z level=info msg="App mode production"
+logger=featuremgmt t=2025-10-17T14:38:32.151093495Z level=info msg=FeatureToggles dashboardSceneForViewers=true recordedQueriesMulti=true alertingRulePermanentlyDelete=true alertingBulkActionsInUI=true logRowsPopoverMenu=true publicDashboardsScene=true transformationsRedesign=true alertingSaveStateCompressed=true correlations=true skipTokenRotationIfRecent=true awsDatasourcesTempCredentials=true lokiQuerySplitting=true adhocFiltersInTooltips=true alertingUIOptimizeReducer=true newDashboardSharingComponent=true groupToNestedTableTransformation=true logsContextDatasourceUi=true alertingRuleVersionHistoryRestore=true influxdbBackendMigration=true azureMonitorEnableUserAuth=true newFiltersUI=true improvedExternalSessionHandlingSAML=true logsInfiniteScrolling=true grafanaAssistantInProfilesDrilldown=true useSessionStorageForRedirection=true unifiedStorageHistoryPruner=true awsAsyncQueryCaching=true ssoSettingsLDAP=true annotationPermissionUpdate=true alertingNotificationsStepMode=true dataplaneFrontendFallback=true alertingRuleRecoverDeleted=true tlsMemcached=true alertingImportYAMLUI=true cloudWatchCrossAccountQuerying=true dashboardSceneSolo=true preinstallAutoUpdate=true alertingMigrationUI=true addFieldFromCalculationStatFunctions=true dashboardScene=true kubernetesDashboards=true onPremToCloudMigrations=true azureMonitorPrometheusExemplars=true formatString=true promQLScope=true lokiLabelNamesQueryApi=true cloudWatchRoundUpEndTime=true cloudWatchNewLabelParsing=true pinNavItems=true dashboardDsAdHocFiltering=true grafanaconThemes=true dashgpt=true unifiedRequestLog=true alertingQueryAndExpressionsStepMode=true improvedExternalSessionHandling=true alertRuleRestore=true logsPanelControls=true prometheusAzureOverrideAudience=true logsExploreTableVisualisation=true panelMonitoring=true newPDFRendering=true
+logger=sqlstore t=2025-10-17T14:38:32.151129245Z level=info msg="Connecting to DB" dbtype=sqlite3
+logger=migrator t=2025-10-17T14:38:32.157397318Z level=info msg="Locking database"
+logger=migrator t=2025-10-17T14:38:32.15741461Z level=info msg="Starting DB migrations"
+logger=migrator t=2025-10-17T14:38:32.167612635Z level=info msg="migrations completed" performed=0 skipped=674 duration=318.083µs
+logger=migrator t=2025-10-17T14:38:32.167884552Z level=info msg="Unlocking database"
+logger=secrets t=2025-10-17T14:38:32.168086676Z level=info msg="Envelope encryption state" enabled=true currentprovider=secretKey.v1
+logger=plugin.angulardetectorsprovider.dynamic t=2025-10-17T14:38:32.208460738Z level=info msg="Restored cache from database" duration=354.958µs
+logger=resource-db t=2025-10-17T14:38:32.209754986Z level=info msg="Using database section" db_type=sqlite3
+logger=resource-db t=2025-10-17T14:38:32.209803986Z level=info msg="Initializing Resource DB" db_type=sqlite3 open_conn=0 in_use_conn=0 idle_conn=0 max_open_conn=0
+logger=resource-migrator t=2025-10-17T14:38:32.215010562Z level=info msg="Locking database"
+logger=resource-migrator t=2025-10-17T14:38:32.215075312Z level=info msg="Starting DB migrations"
+logger=resource-migrator t=2025-10-17T14:38:32.220670719Z level=info msg="migrations completed" performed=0 skipped=26 duration=27.916µs
+logger=resource-migrator t=2025-10-17T14:38:32.220928927Z level=info msg="Unlocking database"
+t=2025-10-17T14:38:32.221082969Z level=info caller=logger.go:214 time=2025-10-17T14:38:32.22106501Z msg="Using channel notifier" logger=sql-resource-server
+logger=plugin.store t=2025-10-17T14:38:32.221808634Z level=info msg="Loading plugins..."
+logger=plugins.registration t=2025-10-17T14:38:32.265580941Z level=info msg="Plugin registered" pluginId=grafana-exploretraces-app
+logger=plugins.registration t=2025-10-17T14:38:32.286977741Z level=info msg="Plugin registered" pluginId=grafana-lokiexplore-app
+logger=plugins.registration t=2025-10-17T14:38:32.301046969Z level=info msg="Plugin registered" pluginId=grafana-metricsdrilldown-app
+logger=plugins.registration t=2025-10-17T14:38:32.312127285Z level=info msg="Plugin registered" pluginId=grafana-pyroscope-app
+logger=plugin.store t=2025-10-17T14:38:32.312145327Z level=info msg="Plugins loaded" count=56 duration=90.337193ms
+logger=query_data t=2025-10-17T14:38:32.315451655Z level=info msg="Query Service initialization"
+logger=live.push_http t=2025-10-17T14:38:32.317143111Z level=info msg="Live Push Gateway initialization"
+logger=ngalert.notifier component=alertmanager orgID=1 t=2025-10-17T14:38:32.318613942Z level=info msg="Applying new configuration to Alertmanager" configHash=d2c56faca6af2a5772ff4253222f7386
+logger=ngalert.writer t=2025-10-17T14:38:32.324051017Z level=info msg="Setting up remote write using data sources" timeout=30s default_datasource_uid=
+logger=ngalert t=2025-10-17T14:38:32.324104975Z level=info msg="Using protobuf-based alert instance store"
+logger=ngalert.state.manager.persist t=2025-10-17T14:38:32.324110683Z level=info msg="Using rule state persister"
+logger=secret-migrator t=2025-10-17T14:38:32.325822889Z level=info msg="Locking database"
+logger=secret-migrator t=2025-10-17T14:38:32.325833889Z level=info msg="Starting DB migrations"
+logger=secret-migrator t=2025-10-17T14:38:32.326350471Z level=info msg="migrations completed" performed=0 skipped=24 duration=19.917µs
+logger=secret-migrator t=2025-10-17T14:38:32.326638388Z level=info msg="Unlocking database"
+logger=infra.usagestats.collector t=2025-10-17T14:38:32.326833846Z level=info msg="registering usage stat providers" usageStatsProvidersLen=2
+logger=grafanaStorageLogger t=2025-10-17T14:38:32.327533178Z level=info msg="Storage starting"
+logger=ngalert.multiorg.alertmanager t=2025-10-17T14:38:32.327736678Z level=info msg="Starting MultiOrg Alertmanager"
+logger=ngalert.state.manager t=2025-10-17T14:38:32.327835219Z level=info msg="Warming state cache for startup"
+logger=provisioning.alerting t=2025-10-17T14:38:32.339561742Z level=info msg="starting to provision alerting"
+logger=provisioning.alerting t=2025-10-17T14:38:32.339581159Z level=info msg="finished to provision alerting"
+logger=provisioning.dashboard t=2025-10-17T14:38:32.339687534Z level=info msg="starting to provision dashboards"
+logger=provisioning.dashboard t=2025-10-17T14:38:32.339690826Z level=info msg="finished to provision dashboards"
+logger=http.server t=2025-10-17T14:38:32.3400822Z level=info msg="HTTP Server Listen" address=[::]:3000 protocol=http subUrl= socket=
+logger=ngalert.state.manager t=2025-10-17T14:38:32.345274609Z level=info msg="State cache has been initialized" states=0 duration=17.439348ms
+logger=ngalert.scheduler t=2025-10-17T14:38:32.345305858Z level=info msg="Starting scheduler" tickInterval=10s maxAttempts=3
+logger=ngalert.scheduler t=2025-10-17T14:38:32.345324775Z level=info msg=starting component=ticker first_tick=2025-10-17T14:38:40Z
+logger=grafana-apiserver t=2025-10-17T14:38:32.482733978Z level=info msg="Adding GroupVersion userstorage.grafana.app v0alpha1 to ResourceManager"
+logger=grafana-apiserver t=2025-10-17T14:38:32.482859727Z level=info msg="Adding GroupVersion features.grafana.app v0alpha1 to ResourceManager"
+logger=grafana-apiserver t=2025-10-17T14:38:32.483863476Z level=info msg="Adding GroupVersion notifications.alerting.grafana.app v0alpha1 to ResourceManager"
+logger=grafana-apiserver t=2025-10-17T14:38:32.488101386Z level=info msg="Adding GroupVersion dashboard.grafana.app v1beta1 to ResourceManager"
+logger=grafana-apiserver t=2025-10-17T14:38:32.488305844Z level=info msg="Adding GroupVersion dashboard.grafana.app v0alpha1 to ResourceManager"
+logger=grafana-apiserver t=2025-10-17T14:38:32.488552177Z level=info msg="Adding GroupVersion dashboard.grafana.app v2beta1 to ResourceManager"
+logger=grafana-apiserver t=2025-10-17T14:38:32.488793801Z level=info msg="Adding GroupVersion dashboard.grafana.app v2alpha1 to ResourceManager"
+logger=grafana-apiserver t=2025-10-17T14:38:32.489394926Z level=info msg="Adding GroupVersion folder.grafana.app v1beta1 to ResourceManager"
+logger=grafana-apiserver t=2025-10-17T14:38:32.490686799Z level=info msg="Adding GroupVersion iam.grafana.app v0alpha1 to ResourceManager"
+logger=grafana-apiserver t=2025-10-17T14:38:32.491253173Z level=info msg="Adding GroupVersion playlist.grafana.app v0alpha1 to ResourceManager"
+t=2025-10-17T14:38:32.491301256Z level=info caller=logger.go:214 time=2025-10-17T14:38:32.491297923Z msg="Installed APIs for app" app=playlist
+logger=grafana-apiserver t=2025-10-17T14:38:32.491389756Z level=info msg="Skipping API plugins.grafana.app/v0alpha1 because it has no resources."
+t=2025-10-17T14:38:32.491417006Z level=info caller=logger.go:214 time=2025-10-17T14:38:32.491415297Z msg="Installed APIs for app" app=plugins
+logger=app-registry t=2025-10-17T14:38:32.525134828Z level=info msg="app registry initialized"
+t=2025-10-17T14:38:32.525151703Z level=info caller=logger.go:214 time=2025-10-17T14:38:32.525149328Z msg="App initialized" app=plugins
+t=2025-10-17T14:38:32.525170828Z level=info caller=logger.go:214 time=2025-10-17T14:38:32.525166286Z msg="App initialized" app=playlist
+logger=plugins.update.checker t=2025-10-17T14:38:32.584094986Z level=info msg="Update check succeeded" duration=257.110225ms
+logger=grafana.update.checker t=2025-10-17T14:38:32.590027894Z level=info msg="Update check succeeded" duration=263.053381ms
