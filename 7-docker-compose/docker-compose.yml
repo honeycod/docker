@@ -1,0 +1,21 @@
+services:
+  api:
+    image: postgres:18.0-alpine3.22
+    restart: always
+    ports:
+      - "5432:5432"
+    networks:
+      - my-pg-network
+    volumes:
+      - pg-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+
+networks:
+  my-pg-network:
+    driver: bridge
+
+volumes:
+  pg-data: {}
