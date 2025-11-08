@@ -1,1 +1,42 @@
  ansible localhost -m setup -a "filter=ansible_distribution,ansible_hostname,ansible_all_ipv4_addresses,ansible_env"
+ вывод:
+ localhost | SUCCESS => {
+     "ansible_facts": {
+         "ansible_all_ipv4_addresses": [
+             "192.168.3.60",
+             "172.23.178.252"
+         ],
+         "ansible_distribution": "MacOSX",
+         "ansible_env": {
+             "COMMAND_MODE": "unix2003",
+             "HOME": "/Users/d.mikulyak",
+             "HOMEBREW_CELLAR": "/opt/homebrew/Cellar",
+             "HOMEBREW_PREFIX": "/opt/homebrew",
+             "HOMEBREW_REPOSITORY": "/opt/homebrew",
+             "INFOPATH": "/opt/homebrew/share/info:",
+             "LC_CTYPE": "UTF-8",
+             "LOGNAME": "d.mikulyak",
+             "NVM_BIN": "/Users/d.mikulyak/.nvm/versions/node/v20.7.0/bin",
+             "NVM_CD_FLAGS": "-q",
+             "NVM_DIR": "/Users/d.mikulyak/.nvm",
+             "NVM_INC": "/Users/d.mikulyak/.nvm/versions/node/v20.7.0/include/node",
+             "PATH": "/Users/d.mikulyak/.nvm/versions/node/v20.7.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/d.mikulyak/.nvm/versions/node/v20.7.0/bin",
+             "PWD": "/Users/d.mikulyak/Desktop/docker purpleschool/ansible-demo",
+             "SHELL": "/bin/zsh",
+             "SHLVL": "3",
+             "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.LEPvrHLmRe/Listeners",
+             "TERM": "xterm-256color",
+             "TERMINAL_EMULATOR": "JetBrains-JediTerm",
+             "TERM_SESSION_ID": "dd22b326-2a76-4da1-a7e3-af9c89c1547e",
+             "TMPDIR": "/var/folders/g2/sv6g93hn6s72kxf8cpr7j5w80000gq/T/",
+             "USER": "d.mikulyak",
+             "XPC_FLAGS": "0x0",
+             "XPC_SERVICE_NAME": "0",
+             "_": "/opt/homebrew/Cellar/ansible/12.2.0/libexec/bin/python",
+             "__CFBundleIdentifier": "com.jetbrains.WebStorm",
+             "__CF_USER_TEXT_ENCODING": "0x1F7:0x7:0x31"
+         },
+         "ansible_hostname": "macbook-QTXK1H2637"
+     },
+     "changed": false
+ }
