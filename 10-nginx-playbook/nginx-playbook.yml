@@ -1,0 +1,87 @@
+---
+- name: Запуск Nginx в Docker с кастомным index.html и конфигом
+  hosts: demo
+  become: yes
+  vars:
+    nginx_conf_dir: "/opt/nginx/conf"
+    nginx_html_dir: "/opt/nginx/html"
+    nginx_conf_file: "{{ nginx_conf_dir }}/nginx.conf"
+    nginx_html_file: "{{ nginx_html_dir }}/index.html"
+    container_name: my_nginx
+
+  tasks:
+    - name: Убедиться, что директории для конфига и HTML существуют
+      file:
+        path: "{{ item }}"
+        state: directory
+        mode: '0755'
+      loop:
+        - "{{ nginx_conf_dir }}"
+        - "{{ nginx_html_dir }}"
+
+    - name: Создать кастомный index.html
+      copy:
+        content: |
+          <!DOCTYPE html>
+          <html >
+          <head>
+              <meta charset="UTF-8">
+              <title>My Nginx</title>
+          </head>
+          <body>
+              <h1>🎉 Nginx запущен через Docker с Ansible!</h1>
+              <p>Этот файл подключён через volume.</p>
+          </body>
+          </html>
+        dest: "{{ nginx_html_file }}"
+        mode: '0644'
+
+    - name: Создать конфигурационный файл nginx.conf
+      copy:
+        content: |
+          server {
+              listen 80;
+              root /usr/share/nginx/html;
+
+              location / {
+                  index index.html index.htm;
+                  try_files $uri $uri/ /index.html =404;
+              }
+
+              error_page 404 /index.html;
+              location = /404 {
+                  return 404;
+              }
+          }
+        dest: "{{ nginx_conf_file }}"
+        mode: '0644'
+
+    - name: Убедиться, что Docker служба запущена
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Запустить контейнер Nginx с пробросом портов и volumes
+      docker_container:
+        name: "{{ container_name }}"
+        image: nginx:alpine
+        ports:
+          - "8081:80"
+        volumes:
+          - "{{ nginx_html_file }}:/usr/share/nginx/html/index.html"
+          - "{{ nginx_conf_file }}:/etc/nginx/conf.d/default.conf"
+        restart_policy: always
+        state: started
+
+    - name: Проверить, что контейнер запущен
+      command: docker ps --filter "name={{ container_name }}" --filter "status=running" --quiet
+      register: container_check
+      changed_when: false
+
+    - name: Вывести сообщение об успехе
+      debug:
+        msg: |
+          Контейнер Nginx успешно запущен!
+          Перейдите по адресу: http://localhost:8081
+      when: container_check.stdout != ""
