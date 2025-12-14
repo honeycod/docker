@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  nginx:
+    image: nginx:alpine
+    deploy:
+      mode: global
+    configs:
+      - source: nginx_config
+        target: /etc/nginx/nginx.conf
+    networks:
+      - overlay_network
+
+  postgres:
+    image: postgres:15
+    deploy:
+      placement:
+        constraints:
+          - node.labels.db_role == primary  # Контейнер запустится только на ноде с меткой db_role=primary
+    environment:
+      POSTGRES_DB: mydb
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - overlay_network
+
+# Определяем конфиг для nginx
+configs:
+  nginx_config:
+    file: ./nginx.conf
+
+# Определяем том и сеть
+volumes:
+  postgres_data:
+
+networks:
+  overlay_network:
+    driver: overlay
